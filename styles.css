@@ -36,10 +36,11 @@ p {
     line-height: 1.2;
 }
 header {
-    padding: 5px 20px 10px;
+    padding: 8px 20px 10px;
     width: 100vw;
-    height: 100px;
+    height: 65px;
 }
+
 #logo {
     float: left;
     height: 50px;
@@ -84,7 +85,108 @@ nav ul li a {
     fill: white;
 }
 
-article {}
+article {
+    min-height: 85vh;
+}
+
+/*****************
+* Spotlight page *
+*****************/
+
+#slides {
+    text-align: center;
+    overflow: visible;
+    margin: 0 auto 30px;
+    width: 800px;
+}
+#slides .slidesjs-slide {
+    width: 800px;
+    padding: 20px;
+}
+#slides .slidesjs-slide > div {
+    border-radius: 30px;
+    background: white;
+    overflow: hidden;
+    box-shadow:
+        0px 3px 0 #ddd,
+        0 5px 10px rgba(68, 68, 68, 0.5);
+}
+#slides .slidesjs-slide > div > div {
+    width: 100%;
+    padding: 15px 30px 15px;
+    color: #434343;
+    text-align: left;
+}
+#slides .slidesjs-slide h5 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+#slides .slidesjs-slide a {
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    background: linear-gradient(50deg, #f15a3d 30%, #f7901e);
+}
+.slidesjs-navigation {
+    display: none;
+}
+.slidesjs-pagination li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.slidesjs-pagination a {
+    font-size: 0;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: solid 4px #434343;
+    border-radius: 100%;
+}
+.slidesjs-pagination a.active {
+    background: #434343;
+}
+
+/*****************
+* Portfolio page *
+*****************/
+article#portfolio {
+    background: #f5f5f5;
+    color: #434343;
+}
+article#portfolio > div {
+    text-align: center;
+}
+article#portfolio > div > div {
+    width: 4in;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    box-shadow:
+        0px 3px 0 #ddd,
+        0 5px 10px rgba(68, 68, 68, 0.5);
+}
+article#portfolio img {
+    width: 100%;
+    background: #333;
+}
+article#portfolio .desc {
+    padding: 30px;
+}
+article#portfolio div div p {
+    font-size: 16px;
+}
+
+
+/******************
+*   About page    *
+******************/
 section {
     width: 45vw;
     padding-top: 50px;
@@ -101,7 +203,7 @@ section:last-of-type {
 }
 h2 {
     font-size: 40px;
-    border-bottom: solid 1px white;
+    border-bottom: solid 2px white;
     margin-bottom: 10px;
 }
 section > p {
