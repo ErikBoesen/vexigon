@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Vexigon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Vexigon" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#spotlight">spotlight</a></li>
+                <li id="selected"><a href="#portfolio">portfolio</a></li>
+                <li><a href="#about">about</a></li>
+            </ul>
+        </nav>
+        <ul class="social">
+            <li><a href="mailto:?"><svg viewBox="0 0 48 48"><path d="M40 8H8c-2.21 0-3.98 1.79-3.98 4L4 36c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V12c0-2.21-1.79-4-4-4zm0 8L24 26 8 16v-4l16 10 16-10v4z"/></svg></a></li>
+        </ul>
+    </header>
+    <article id="spotlight">
+        <div id="slides">
+            <div>
+                <div>
+                    <img src="http://placehold.it/800x400">
+                    <div>
+                        <h5>A Project</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#">Explore</a>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="http://placehold.it/800x400">
+                    <div>
+                        <h5>A Project</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#">Explore</a>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="http://placehold.it/800x400">
+                    <div>
+                        <h5>A Project</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#">Explore</a>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article id="portfolio">
+        <div>
+            <div>
+                <img src="https://www.mystudylife.com/media/1016/android-material-design.png">
+                <div class="desc">
+                    <h4>Lorem Ipsum Dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://www.mystudylife.com/media/1016/android-material-design.png">
+                <div class="desc">
+                    <h4>Consectetur</h4>
+                    <p>Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://www.mystudylife.com/media/1016/android-material-design.png">
+                <div class="desc">
+                    <h4>Ullamco</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article id="about">
+        <section>
+            <h2>The Team</h2>
+            <p>At Vexigon, we're a small team focused on providing excellent customer service, and great products quickly with reasonable rates.</p>
+            <div class="profile">
+                <div class="id">
+                    <img src="http://fillmurray.com/200/200">
+                    <h5>Andrew</h5>
+                </div>
+                <div class="bio">
+                    <h6>CFO, Lead Designer, Other Positions</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="id">
+                    <img src="http://fillmurray.com/200/200">
+                    <h5>Andrew</h5>
+                </div>
+                <div class="bio">
+                    <h6>CFO, Lead Designer, Other Positions</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Our Philosophy</h2>
+            <p>We design for the user. By ensuring that everything in the end is of some benefit to users, we can guarantee that your product will be lorem ipsum.</p>
+            <div id="contact">
+                <h3>Contact</h3>
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Subject">
+                    <textarea placeholder="Message" rows="5"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </section>
+    </article>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.min.js"></script>
+    <script src="jquery.smooth-scroll.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
