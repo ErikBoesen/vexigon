@@ -23,10 +23,19 @@
     box-sizing: border-box;
 }
 body {
-    background: linear-gradient(50deg, #f15a3d 30%, #f7901e);
     font-family: 'Roboto', sans-serif;
+    background: linear-gradient(50deg, #f15a3d 30%, #f7901e);
     color: white;
     font-size: 20px;
+}
+.bg-triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom right, transparent 50%, #eee 50%);
+    z-index: -100;
 }
 
 h1, h2, h3, nav {
