@@ -13,20 +13,21 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(50deg, #f15a3d 30%, #f7901e);
     color: white;
     font-size: 20px;
+    margin-top: 65px;
 }
 .bg-triangle {
     position: absolute;
@@ -34,7 +35,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom right, transparent 50%, #eee 50%);
+    background: linear-gradient(to bottom right, transparent 59.9%, #eee 40%);
     z-index: -100;
 }
 
@@ -49,8 +50,10 @@ header {
     padding: 8px 20px 10px;
     width: 100vw;
     height: 65px;
+    top: 0;
     position: fixed;
     z-index: 100;
+    background: #f7901e;
 }
 #logo {
     float: left;
@@ -72,18 +75,20 @@ nav ul li {
     display: inline-block;
 }
 nav ul li a {
-    padding: 5px 10px;
+    padding: 5px 20px;
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 20px;
     text-decoration: none;
     color: inherit;
+    transition: .2s;
 }
 #selected {}
 #selected a {
     color: #434343;
     padding: 5px 20px;
     background: white;
+    transition: .2s;
 }
 .social {
     float: right;
@@ -107,17 +112,19 @@ nav ul li a {
     }
 }
 
-article {}
+article {
+    min-height: calc(100vh - 65px);
+}
 
 /*****************
 * Spotlight page *
 *****************/
 article#spotlight {
-    padding-top: 65px;
+    padding-top: 5vh;
 }
 #slides {
     text-align: center;
-    margin: 0 auto 30px;
+    margin: 0 auto 0;
     max-width: 800px;
 }
 .slick-slide {
@@ -186,6 +193,7 @@ article#portfolio {
     background: #f5f5f5;
     color: #434343;
     padding: 15px 0;
+    margin: 0;
 }
 article#portfolio > div {
     text-align: center;
@@ -246,6 +254,7 @@ section:last-of-type p {
 .profile {
     margin-top: 30px;
     background: white;
+    width: 400px;
     height: 170px;
     border-radius: 10px;
     overflow: hidden;
@@ -337,7 +346,7 @@ section:last-of-type p {
     opacity: 1;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     section {
         display: block;
         margin: 0;
