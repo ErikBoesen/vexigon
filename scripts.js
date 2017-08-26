@@ -19,12 +19,10 @@ function colorize(event, slick, previous, num) {
     header.style.background = COLORS[num][1];
 }
 
-$(function() {
-    $("#slides").slick({
-        autoplay: true,
-        arrows: false,
-        dots: true
-    });
+$("#slides").slick({
+    autoplay: true,
+    arrows: false,
+    dots: true
 });
 
 $('#slides').on('beforeChange', colorize);
@@ -38,4 +36,9 @@ $('nav ul a').on('click', function(e) {
     }, 400, 'swing', function() {
         window.location.hash = hash;
     });
+});
+
+$.scrollify({
+	section: 'article',
+    scrollSpeed: 400
 });
