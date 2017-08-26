@@ -32,12 +32,7 @@ $('#slides').on('beforeChange', colorize);
 $('nav ul a').on('click', function(e) {
     e.preventDefault();
     var hash = this.hash;
-    var top = document.getElementById(hash.slice(1)).offsetTop - 65;
-    /*$.smoothScroll({
-        scrollElement: $('body'),
-        scrollTarget: document.getElementById(hash.slice(1)).offsetTop,
-        afterScroll:
-    });*/
+    var top = document.getElementById(hash.slice(1)).offsetTop;
     $('body').animate({
         scrollTop: top
     }, 400, 'swing', function() {
