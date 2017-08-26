@@ -1,5 +1,6 @@
 var navItems = document.querySelectorAll('nav li');
 var header = document.getElementsByTagName('header')[0];
+var spotlight = document.getElementById('spotlight');
 
 document.body.onscroll = function() {
     for (i = 0; i < navItems.length; i++) navItems[i].id = '';
@@ -14,7 +15,7 @@ var COLORS = [
 ];
 
 function colorize(event, slick, previous, num) {
-    document.body.style.background = 'linear-gradient(50deg, ' + COLORS[num][0] + ' 30%, ' + COLORS[num][1] + ')';
+    spotlight.style.background = 'linear-gradient(50deg, ' + COLORS[num][0] + ' 30%, ' + COLORS[num][1] + ')';
     header.style.background = COLORS[num][1];
 }
 
@@ -31,11 +32,15 @@ $('#slides').on('beforeChange', colorize);
 $('nav ul a').on('click', function(e) {
     e.preventDefault();
     var hash = this.hash;
-    $.smoothScroll({
+    var top = document.getElementById(hash.slice(1)).offsetTop - 65;
+    /*$.smoothScroll({
         scrollElement: $('body'),
-        scrollTarget: hash,
-        afterScroll: function() {
-            window.location.hash = hash;
-        }
+        scrollTarget: document.getElementById(hash.slice(1)).offsetTop,
+        afterScroll:
+    });*/
+    $('body').animate({
+        scrollTop: top
+    }, 400, 'swing', function() {
+        window.location.hash = hash;
     });
 });
