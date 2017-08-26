@@ -1,10 +1,7 @@
-var bg = document.getElementsByClassName('bg-triangle')[0];
 var navItems = document.querySelectorAll('nav li');
 var header = document.getElementsByTagName('header')[0];
 
 document.body.onscroll = function() {
-    bg.style.transform = 'translateX(' + document.body.scrollTop*0.8 + 'px)';
-
     for (i = 0; i < navItems.length; i++) navItems[i].id = '';
 
     navItems[Math.round(document.body.scrollTop / (window.innerHeight-65))].id = 'selected';

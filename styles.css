@@ -226,6 +226,9 @@ article#portfolio div div p {
 /******************
 *   About page    *
 ******************/
+article#about {
+    background: linear-gradient(to bottom right, transparent 59.9%, #eee 40%);
+}
 section {
     width: 45vw;
     padding-top: 50px;
