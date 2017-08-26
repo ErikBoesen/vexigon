@@ -31,10 +31,8 @@ body {
 }
 .bg-triangle {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
     background: linear-gradient(to bottom right, transparent 59.9%, #eee 40%);
     z-index: -100;
 }
@@ -54,6 +52,7 @@ header {
     position: fixed;
     z-index: 100;
     background: #f7901e;
+    box-shadow: 0 3px 5px rgba(68, 68, 68, 0.1);
 }
 #logo {
     float: left;
@@ -120,7 +119,17 @@ article {
 * Spotlight page *
 *****************/
 article#spotlight {
-    padding-top: 5vh;
+    padding-top: 10vh;
+}
+@media (max-height: 900px) {
+    article#spotlight {
+        padding-top: 5vh;
+    }
+}
+@media (max-height: 800px) {
+    article#spotlight {
+        padding-top: 10px;
+    }
 }
 #slides {
     text-align: center;
@@ -194,6 +203,8 @@ article#portfolio {
     color: #434343;
     padding: 15px 0;
     margin: 0;
+    display: flex;
+    flex-direction: row;
 }
 article#portfolio > div {
     text-align: center;
