@@ -50,8 +50,17 @@ header {
     top: 0;
     position: fixed;
     z-index: 100;
-    background: #f7901e;
+}
+.header-bg {
+    width: 100vw;
+    height: 65px;
+    background: linear-gradient(50deg, #f15a3d 30%, #f7901e);
     box-shadow: 0 3px 5px rgba(68, 68, 68, 0.1);
+    z-index: 90;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    transition: .2s opacity;
 }
 #logo {
     float: left;
@@ -122,16 +131,6 @@ article#spotlight {
     padding-top: 10vh;
     background: linear-gradient(50deg, #f15a3d 30%, #f7901e);
 }
-@media (max-height: 900px) {
-    article#spotlight {
-        padding-top: 5vh;
-    }
-}
-@media (max-height: 800px) {
-    article#spotlight {
-        padding-top: 10px;
-    }
-}
 #slides {
     text-align: center;
     margin: 0 auto 0;
@@ -197,6 +196,20 @@ article#spotlight {
 .slick-dots .slick-active button {
     background: #434343;
 }
+@media (max-height: 900px) {
+    article#spotlight {
+        padding-top: 5vh;
+    }
+}
+@media (max-height: 800px) {
+    article#spotlight {
+        padding-top: 65px;
+    }
+    #slides {
+        max-width: 680px;
+    }
+}
+
 /*****************
 * Portfolio page *
 *****************/
@@ -243,6 +256,8 @@ article#portfolio div div p {
 ******************/
 article#about {
     background: linear-gradient(50deg, #f15a3d 30%, #f7901e);
+    height: auto;
+    box-sizing: content-box; /* Prevents white overflow on Mac Chrome */
 }
 section {
     width: 45vw;
@@ -362,6 +377,12 @@ section:last-of-type p {
 :-moz-placeholder { /* Firefox 4 - 18 */
     color: #aaa;
     opacity: 1;
+}
+@media (max-height: 800px) {
+    #about section {
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
 }
 
 @media (max-width: 1000px) {

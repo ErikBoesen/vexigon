@@ -1,11 +1,15 @@
 var navItems = document.querySelectorAll('nav li');
 var header = document.getElementsByTagName('header')[0];
+var headerBG = document.getElementsByClassName('header-bg')[0];
 var spotlight = document.getElementById('spotlight');
+
 
 document.body.onscroll = function() {
     for (i = 0; i < navItems.length; i++) navItems[i].id = '';
 
     navItems[Math.round(document.body.scrollTop / (window.innerHeight-65))].id = 'selected';
+
+    headerBG.style.opacity = (document.body.scrollTop > 200) ? 1 : 0;
 };
 
 var COLORS = [
@@ -16,7 +20,6 @@ var COLORS = [
 
 function colorize(event, slick, previous, num) {
     spotlight.style.background = 'linear-gradient(50deg, ' + COLORS[num][0] + ' 30%, ' + COLORS[num][1] + ')';
-    header.style.background = COLORS[num][1];
 }
 
 $("#slides").slick({
