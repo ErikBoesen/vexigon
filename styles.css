@@ -33,7 +33,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom right, transparent 59.9%, #eee 40%);
-    z-index: -100;
+    z-index: 50;
 }
 
 h1, h2, h3, nav {
@@ -136,6 +136,7 @@ article#spotlight {
     text-align: center;
     margin: 0 auto 0;
     max-width: 800px;
+    z-index: 70;
 }
 .slick-slide {
     padding: 20px;
