@@ -141,7 +141,6 @@ article#spotlight {
 }
 .slick-slide {
     padding: 20px;
-    overflow: scroll;
     outline: none;
 }
 .slick-slide img {
@@ -196,6 +195,12 @@ article#spotlight {
 }
 .slick-dots .slick-active button {
     background: #434343;
+}
+@media (max-width: 600px) {
+    .slick-dots {
+        /* Must be !important, plugin will override if not */
+        display: none !important;
+    }
 }
 @media (max-height: 900px) {
     article#spotlight {
