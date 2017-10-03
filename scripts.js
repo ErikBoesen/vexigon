@@ -2,11 +2,13 @@ var navItems = document.querySelectorAll('nav li');
 var sections = document.getElementsByTagName('article')
 var header = document.getElementsByTagName('header')[0];
 var headerBG = document.getElementsByClassName('header-bg')[0];
-var spotlight = document.getElementById('spotlight-section');
+var spotlight = document.getElementById('spotlight');
 
 document.body.onscroll = function() {
-    var top = document.documentElement.scrollTop;
+    var top = document.body.scrollTop | document.documentElement.scrollTop;
+    console.log(top);
     for (i = 0; i < navItems.length; i++) navItems[i].id = '';
+    headerBG.style.opacity = (top > 200) ? 1 : 0;
 
     var dist;
     var closest;
@@ -18,8 +20,6 @@ document.body.onscroll = function() {
         }
     }
     navItems[closest].id = 'selected';
-
-    headerBG.style.opacity = (top > 200) ? 1 : 0;
 };
 
 var COLORS = [
@@ -43,6 +43,7 @@ $('#slides').on('beforeChange', colorize);
 $('nav ul a').on('click', function(e) {
     e.preventDefault();
     var hash = this.hash;
+    console.log(hash.slice(1));
     var top = document.getElementById(hash.slice(1)).offsetTop;
     $('body').animate({
         scrollTop: top
@@ -51,7 +52,7 @@ $('nav ul a').on('click', function(e) {
     });
 });
 
-if (document.body.clientWidth > 800 && false) {
+if (document.body.clientWidth > 800) {
     $.scrollify({
         section: 'article',
         scrollSpeed: 400

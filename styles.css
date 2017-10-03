@@ -32,7 +32,7 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom right, transparent 59.9%, #eee 40%);
+    background: linear-gradient(to bottom right, transparent 49.9%, #eee 50%);
     z-index: 50;
 }
 
@@ -127,7 +127,7 @@ article {
 /*****************
 * Spotlight page *
 *****************/
-article#spotlight-section {
+article#spotlight {
     padding-top: 10vh;
     background: linear-gradient(50deg, #f15a3d 30%, #f7901e);
 }
@@ -197,12 +197,12 @@ article#spotlight-section {
     background: #434343;
 }
 @media (max-height: 900px) {
-    article#spotlight-section {
+    article#spotlight {
         padding-top: 5vh;
     }
 }
 @media (max-height: 800px) {
-    article#spotlight-section {
+    article#spotlight {
         padding-top: 65px;
     }
     #slides {
@@ -213,7 +213,7 @@ article#spotlight-section {
 /*****************
 * Portfolio page *
 *****************/
-article#portfolio-section {
+article#portfolio {
     background: #f5f5f5;
     color: #434343;
     padding: 15px 0;
@@ -223,10 +223,10 @@ article#portfolio-section {
     justify-content: center;
     align-items: center;
 }
-article#portfolio-section > div {
+article#portfolio > div {
     text-align: center;
 }
-article#portfolio-section > div > div {
+article#portfolio > div > div {
     width: 4in;
     display: inline-block;
     vertical-align: top;
@@ -239,18 +239,18 @@ article#portfolio-section > div > div {
         0 1px 0 #ddd,
         0 5px 10px rgba(68, 68, 68, 0.3);
 }
-article#portfolio-section img {
+article#portfolio img {
     width: 100%;
     background: #333;
 }
-article#portfolio-section .desc {
+article#portfolio .desc {
     padding: 30px;
 }
-article#portfolio-section div div p {
+article#portfolio div div p {
     font-size: 16px;
 }
 @media (max-width: 700px) {
-    article#spotlight-section {
+    article#spotlight {
         padding-top: 120px;
     }
 }
@@ -259,7 +259,7 @@ article#portfolio-section div div p {
 /******************
 *   About page    *
 ******************/
-article#about-section {
+article#about {
     background: linear-gradient(50deg, #f15a3d 30%, #f7901e);
 }
 section {
@@ -324,7 +324,7 @@ section:last-of-type p {
 }
 
 @media (max-width: 1000px) {
-    article#about-section {
+    article#about {
         padding-bottom: 30px;
     }
     section:last-of-type, section:first-of-type {
@@ -390,7 +390,7 @@ section:last-of-type p {
     opacity: 1;
 }
 @media (max-height: 800px) {
-    #about-section section {
+    #about section {
         padding-top: 20px;
         padding-bottom: 0;
     }
