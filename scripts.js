@@ -2,6 +2,7 @@ var navItems = document.querySelectorAll('nav li');
 var sections = document.getElementsByTagName('article')
 var header = document.getElementsByTagName('header')[0];
 var headerBG = document.getElementsByClassName('header-bg')[0];
+var social = document.getElementsByClassName('social')[0];
 var spotlight = document.getElementById('spotlight');
 
 document.body.onscroll = function() {
@@ -9,6 +10,7 @@ document.body.onscroll = function() {
     console.log(top);
     for (i = 0; i < navItems.length; i++) navItems[i].id = '';
     headerBG.style.opacity = (top > 200) ? 1 : 0;
+    social.style.opacity = (top > 200) ? 1 : 0;
 
     var dist;
     var closest;
@@ -51,6 +53,20 @@ $('nav ul a').on('click', function(e) {
         window.location.hash = hash;
     });
 });
+
+// Applied globally on all textareas with the "autoExpand" class
+$(document)
+    .one('focus', 'textarea', function() {
+        var savedValue = this.value;
+        this.value = '';
+        this.baseScrollHeight = this.scrollHeight;
+        this.value = savedValue;
+    })
+    .on('input', 'textarea', function() {
+        this.rows = 3;
+        rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);
+        this.rows = 3 + rows;
+    });
 
 if (document.body.clientWidth > 800) {
     $.scrollify({
